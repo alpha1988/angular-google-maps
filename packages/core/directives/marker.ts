@@ -73,7 +73,7 @@ export class AgmMarker implements OnDestroy, OnChanges, AfterContentInit {
   /**
    * Icon (the URL of the image) for the foreground.
    */
-  @Input() iconUrl: string | mapTypes.GoogleSymbol;
+  @Input() iconUrl: string | mapTypes.GoogleIcon | mapTypes.GoogleSymbol;
 
   /**
    * If true, the marker is visible
