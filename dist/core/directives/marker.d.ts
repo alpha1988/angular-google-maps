@@ -1,5 +1,6 @@
 import { EventEmitter, OnChanges, OnDestroy, SimpleChange, AfterContentInit, QueryList } from '@angular/core';
 import { MouseEvent } from '../map-types';
+import * as mapTypes from '../services/google-maps-types';
 import { MarkerManager } from '../services/managers/marker-manager';
 import { AgmInfoWindow } from './info-window';
 import { MarkerLabel } from '../map-types';
@@ -51,7 +52,7 @@ export declare class AgmMarker implements OnDestroy, OnChanges, AfterContentInit
     /**
      * Icon (the URL of the image) for the foreground.
      */
-    iconUrl: string;
+    iconUrl: string | mapTypes.GoogleSymbol;
     /**
      * If true, the marker is visible
      */
